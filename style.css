@@ -1,0 +1,1561 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+
+    --primary: #3157d5;
+    --primary-dark: #2343b5;
+
+    --dark: #151d32;
+    --text: #1b2538;
+
+    --muted: #68748a;
+
+    --border: #e1e6ef;
+
+    --background: #f5f7fb;
+
+    --white: #ffffff;
+
+}
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: var(--text);
+
+    background: var(--background);
+
+}
+
+
+/* =========================================
+   LOGIN PAGE
+========================================= */
+
+.login-page {
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+}
+
+
+/* LEFT */
+
+.login-intro {
+
+    padding: 45px 8%;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #172967,
+            #3157d5
+        );
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+
+.logo {
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    color: var(--primary);
+
+    font-weight: 800;
+
+}
+
+
+.brand h2 {
+
+    font-size: 18px;
+
+}
+
+
+.brand p {
+
+    margin-top: 4px;
+
+    font-size: 12px;
+
+    opacity: .7;
+
+}
+
+
+.intro-content {
+
+    max-width: 600px;
+
+}
+
+
+.small-label {
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 800;
+
+    opacity: .8;
+
+}
+
+
+.intro-content h1 {
+
+    margin-top: 20px;
+
+    font-size:
+        clamp(40px, 5vw, 68px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+}
+
+
+.intro-content > p {
+
+    max-width: 520px;
+
+    margin-top: 25px;
+
+    line-height: 1.8;
+
+    color: rgba(255,255,255,.75);
+
+}
+
+
+.intro-features {
+
+    margin-top: 35px;
+
+    display: grid;
+
+    gap: 15px;
+
+}
+
+
+.intro-features div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 14px;
+
+}
+
+
+.intro-features span {
+
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.15);
+
+}
+
+
+.copyright {
+
+    font-size: 12px;
+
+    opacity: .55;
+
+}
+
+
+/* RIGHT */
+
+.login-section {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px;
+
+}
+
+
+.login-card {
+
+    width: 100%;
+
+    max-width: 450px;
+
+    padding: 45px;
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 70px
+        rgba(20,35,70,.08);
+
+}
+
+
+.mobile-logo {
+
+    display: none;
+
+}
+
+
+.welcome-label {
+
+    color: var(--primary);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.login-card h1 {
+
+    margin-top: 10px;
+
+    font-size: 32px;
+
+    letter-spacing: -1px;
+
+}
+
+
+.login-description {
+
+    margin-top: 10px;
+
+    color: var(--muted);
+
+    line-height: 1.6;
+
+    font-size: 14px;
+
+}
+
+
+/* FORM */
+
+form {
+
+    margin-top: 30px;
+
+}
+
+
+.input-group {
+
+    margin-bottom: 22px;
+
+}
+
+
+.input-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+.input-group input {
+
+    width: 100%;
+
+    height: 52px;
+
+    padding: 0 15px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 11px;
+
+    outline: none;
+
+    font-size: 14px;
+
+}
+
+
+.input-group input:focus {
+
+    border-color:
+        var(--primary);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(49,87,213,.08);
+
+}
+
+
+.password-header {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+}
+
+
+.password-header a {
+
+    color: var(--primary);
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+}
+
+
+.password-container {
+
+    position: relative;
+
+}
+
+
+.password-container input {
+
+    padding-right: 50px;
+
+}
+
+
+.password-container button {
+
+    position: absolute;
+
+    right: 12px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    border: none;
+
+    background: none;
+
+    cursor: pointer;
+
+}
+
+
+/* REMEMBER */
+
+.remember {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 13px;
+
+    color: var(--muted);
+
+    margin-bottom: 18px;
+
+}
+
+
+/* ERROR */
+
+#errorMessage {
+
+    min-height: 18px;
+
+    color: #d23d4d;
+
+    font-size: 12px;
+
+    margin-bottom: 5px;
+
+}
+
+
+/* BUTTON */
+
+.login-button {
+
+    width: 100%;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background:
+        var(--primary);
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    transition: .2s;
+
+}
+
+
+.login-button:hover {
+
+    background:
+        var(--primary-dark);
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* DIVIDER */
+
+.divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 25px 0;
+
+    color: #a0a8b5;
+
+    font-size: 10px;
+
+}
+
+
+.divider::before,
+.divider::after {
+
+    content: "";
+
+    height: 1px;
+
+    background:
+        var(--border);
+
+    flex: 1;
+
+}
+
+
+/* PRACTICE */
+
+.practice-button {
+
+    width: 100%;
+
+    height: 50px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 11px;
+
+    background: white;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+.practice-button:hover {
+
+    background:
+        #f6f8fc;
+
+}
+
+
+/* REGISTER */
+
+.register-text {
+
+    margin-top: 22px;
+
+    text-align: center;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+}
+
+
+.register-text a {
+
+    color: var(--primary);
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+}
+
+
+/* WARNING */
+
+.demo-warning {
+
+    margin-top: 25px;
+
+    padding: 14px;
+
+    background:
+        #f2f5ff;
+
+    border-radius: 10px;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    color: #56627a;
+
+}
+
+
+.demo-warning strong {
+
+    color:
+        var(--primary);
+
+}
+
+
+/* =========================================
+   HOME PAGE
+========================================= */
+
+.home-page {
+
+    display: none;
+
+    min-height: 100vh;
+
+    background:
+        var(--background);
+
+}
+
+
+/* NAVBAR */
+
+.navbar {
+
+    height: 76px;
+
+    padding:
+        0 7%;
+
+    background: white;
+
+    border-bottom:
+        1px solid var(--border);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+}
+
+
+.nav-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-weight: 800;
+
+}
+
+
+.nav-logo {
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 11px;
+
+    background:
+        var(--primary);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 800;
+
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+}
+
+
+.nav-links a {
+
+    color:
+        var(--muted);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+.nav-links a:hover {
+
+    color:
+        var(--primary);
+
+}
+
+
+.nav-links button {
+
+    padding:
+        10px 18px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 9px;
+
+    background: white;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+}
+
+
+/* HERO */
+
+.home-hero {
+
+    min-height:
+        600px;
+
+    padding:
+        120px 7%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5f7ff,
+            #ffffff
+        );
+
+}
+
+
+.hero-label {
+
+    padding:
+        8px 13px;
+
+    border-radius:
+        30px;
+
+    background:
+        #e9edff;
+
+    color:
+        var(--primary);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.home-hero h1 {
+
+    max-width: 900px;
+
+    margin-top: 25px;
+
+    font-size:
+        clamp(45px, 7vw, 82px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+}
+
+
+.home-hero > p {
+
+    max-width: 650px;
+
+    margin-top: 25px;
+
+    color: var(--muted);
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 35px;
+
+}
+
+
+.primary-button,
+.secondary-button {
+
+    padding:
+        14px 22px;
+
+    border-radius: 10px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+.primary-button {
+
+    border: none;
+
+    background:
+        var(--primary);
+
+    color: white;
+
+}
+
+
+.secondary-button {
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    color: var(--text);
+
+}
+
+
+/* TEACHER */
+
+.teacher-section {
+
+    max-width: 1150px;
+
+    margin:
+        auto;
+
+    padding:
+        110px 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr .8fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+
+.section-label {
+
+    color:
+        var(--primary);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.teacher-info h2 {
+
+    margin-top: 15px;
+
+    font-size:
+        clamp(35px, 5vw, 55px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+}
+
+
+.teacher-info p {
+
+    max-width: 650px;
+
+    margin-top: 20px;
+
+    color: var(--muted);
+
+    line-height: 1.8;
+
+    font-size: 15px;
+
+}
+
+
+/* STATS */
+
+.stats {
+
+    display: flex;
+
+    gap: 50px;
+
+    margin-top: 35px;
+
+}
+
+
+.stats div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.stats strong {
+
+    color:
+        var(--primary);
+
+    font-size: 22px;
+
+}
+
+
+.stats span {
+
+    color:
+        var(--muted);
+
+    font-size: 12px;
+
+}
+
+
+/* TEACHER CARD */
+
+.teacher-card {
+
+    padding: 35px;
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(20,35,70,.07);
+
+}
+
+
+.teacher-avatar {
+
+    width: 78px;
+    height: 78px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background:
+        var(--primary);
+
+    color: white;
+
+    font-size: 23px;
+
+    font-weight: 800;
+
+}
+
+
+.teacher-role {
+
+    display: block;
+
+    margin-top: 25px;
+
+    color:
+        var(--primary);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+}
+
+
+.teacher-card h3 {
+
+    margin-top: 8px;
+
+    font-size: 27px;
+
+}
+
+
+.teacher-card > p {
+
+    margin-top: 12px;
+
+    color:
+        var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+.line {
+
+    height: 1px;
+
+    background:
+        var(--border);
+
+    margin: 25px 0;
+
+}
+
+
+.skills {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+}
+
+
+.skills span {
+
+    padding:
+        8px 11px;
+
+    background:
+        #f0f3ff;
+
+    color:
+        #4a5670;
+
+    border-radius: 7px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================
+   LEARNING
+========================================= */
+
+.learning-section,
+.roadmap-section {
+
+    max-width: 1150px;
+
+    margin:
+        auto;
+
+    padding:
+        100px 30px;
+
+}
+
+
+.section-heading {
+
+    max-width: 650px;
+
+}
+
+
+.section-heading h2 {
+
+    margin-top: 12px;
+
+    font-size: 40px;
+
+    letter-spacing: -1px;
+
+}
+
+
+.section-heading p {
+
+    margin-top: 10px;
+
+    color:
+        var(--muted);
+
+}
+
+
+.learning-grid {
+
+    margin-top: 40px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.learning-card {
+
+    padding: 32px;
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    transition: .2s;
+
+}
+
+
+.learning-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 20px 40px
+        rgba(20,35,70,.07);
+
+}
+
+
+.number {
+
+    color:
+        var(--primary);
+
+    font-weight: 800;
+
+    font-size: 12px;
+
+}
+
+
+.learning-card h3 {
+
+    margin-top: 25px;
+
+    font-size: 20px;
+
+}
+
+
+.learning-card p {
+
+    margin-top: 10px;
+
+    color:
+        var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================
+   ROADMAP
+========================================= */
+
+.roadmap {
+
+    margin-top: 40px;
+
+    display: grid;
+
+    gap: 12px;
+
+}
+
+
+.roadmap-item {
+
+    padding: 22px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 14px;
+
+}
+
+
+.roadmap-number {
+
+    min-width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background:
+        #f0f3fa;
+
+    color:
+        var(--primary);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+}
+
+
+.roadmap-item h3 {
+
+    font-size: 16px;
+
+}
+
+
+.roadmap-item p {
+
+    margin-top: 5px;
+
+    color:
+        var(--muted);
+
+    font-size: 13px;
+
+}
+
+
+.roadmap-item.active {
+
+    border-color:
+        #b9c5ff;
+
+    background:
+        #f8f9ff;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+    padding:
+        60px 30px;
+
+    text-align: center;
+
+    background:
+        var(--dark);
+
+    color: white;
+
+}
+
+
+.footer-logo {
+
+    width: 45px;
+    height: 45px;
+
+    margin:
+        auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        var(--primary);
+
+    border-radius: 12px;
+
+    font-weight: 800;
+
+}
+
+
+.footer h3 {
+
+    margin-top: 15px;
+
+}
+
+
+.footer p {
+
+    margin-top: 8px;
+
+    color:
+        #aab2c5;
+
+}
+
+
+.footer span {
+
+    display: block;
+
+    margin-top: 25px;
+
+    color:
+        #6f788e;
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .login-page {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .login-intro {
+
+        display: none;
+
+    }
+
+
+    .login-section {
+
+        min-height: 100vh;
+
+        padding: 20px;
+
+    }
+
+
+    .login-card {
+
+        padding: 30px 24px;
+
+    }
+
+
+    .mobile-logo {
+
+        width: 50px;
+        height: 50px;
+
+        margin-bottom: 25px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        background:
+            var(--primary);
+
+        color: white;
+
+        border-radius: 14px;
+
+        font-weight: 800;
+
+    }
+
+
+    .nav-links a {
+
+        display: none;
+
+    }
+
+
+    .teacher-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+
+    .learning-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .home-hero {
+
+        padding:
+            90px 30px;
+
+    }
+
+
+    .home-hero h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        width: 100%;
+
+    }
+
+
+    .primary-button,
+    .secondary-button {
+
+        width: 100%;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .stats {
+
+        gap: 25px;
+
+    }
+
+
+    .home-hero h1 {
+
+        font-size: 40px;
+
+    }
+
+
+    .teacher-info h2 {
+
+        font-size: 36px;
+
+    }
+
+}
