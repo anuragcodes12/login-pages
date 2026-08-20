@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Sahil Khan Tutor | Student Portal</title>
+
+    <!-- CONNECT CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- ==============================
+         LOGIN PAGE
+    =============================== -->
+
+    <main id="loginPage" class="login-page">
+
+        <!-- LEFT SIDE -->
+
+        <section class="login-intro">
+
+            <div class="brand">
+
+                <div class="logo">
+                    SK
+                </div>
+
+                <div>
+                    <h2>Sahil Khan Tutor</h2>
+
+                    <p>
+                        Learn • Practice • Achieve
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="intro-content">
+
+                <span class="small-label">
+                    STUDENT LEARNING PORTAL
+                </span>
+
+                <h1>
+                    Build your skills.
+                    <br>
+                    Build your future.
+                </h1>
+
+                <p>
+                    Learn programming concepts, improve your
+                    logical thinking and become a better problem solver
+                    with Sahil Khan Tutor.
+                </p>
+
+
+                <div class="intro-features">
+
+                    <div>
+                        <span>✓</span>
+                        Strong Programming Fundamentals
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        Practical Problem Solving
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        Step-by-Step Learning
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="copyright">
+
+                © 2026 Sahil Khan Tutor
+
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT SIDE -->
+
+        <section class="login-section">
+
+            <div class="login-card">
+
+                <div class="mobile-logo">
+                    SK
+                </div>
+
+
+                <span class="welcome-label">
+                    WELCOME BACK
+                </span>
+
+
+                <h1>
+                    Sign in
+                </h1>
+
+
+                <p class="login-description">
+
+                    Enter your details to access
+                    Sahil's learning portal.
+
+                </p>
+
+
+                <!-- LOGIN FORM -->
+
+                <form id="loginForm">
+
+
+                    <!-- USERNAME -->
+
+                    <div class="input-group">
+
+                        <label for="username">
+                            Username
+                        </label>
+
+                        <input
+                            type="text"
+                            id="username"
+                            placeholder="Enter any username"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="input-group">
+
+                        <div class="password-header">
+
+                            <label for="password">
+                                Password
+                            </label>
+
+                            <a href="#" id="forgotPassword">
+                                Forgot password?
+                            </a>
+
+                        </div>
+
+
+                        <div class="password-container">
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Enter any password"
+                                autocomplete="off"
+                            >
+
+                            <button
+                                type="button"
+                                id="togglePassword"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- REMEMBER -->
+
+                    <div class="remember">
+
+                        <input
+                            type="checkbox"
+                            id="remember"
+                        >
+
+                        <label for="remember">
+                            Remember me
+                        </label>
+
+                    </div>
+
+
+                    <!-- ERROR -->
+
+                    <p id="errorMessage"></p>
+
+
+                    <!-- LOGIN BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="login-button"
+                    >
+
+                        Sign In
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </form>
+
+
+                <!-- DIVIDER -->
+
+                <div class="divider">
+
+                    <span>OR</span>
+
+                </div>
+
+
+                <!-- PRACTICE LOGIN -->
+
+                <button
+                    id="practiceLogin"
+                    class="practice-button"
+                >
+
+                    Continue as Practice Student
+
+                </button>
+
+
+                <p class="register-text">
+
+                    New student?
+
+                    <a href="#" id="registerLink">
+                        Create practice account
+                    </a>
+
+                </p>
+
+
+                <!-- DEMO WARNING -->
+
+                <div class="demo-warning">
+
+                    <strong>
+                        Practice Mode
+                    </strong>
+
+                    <p>
+                        This is a demonstration website.
+                        Do not enter real personal information
+                        or passwords.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==============================
+         SAHIL'S HOME PAGE
+    =============================== -->
+
+    <section id="homePage" class="home-page">
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="navbar">
+
+            <div class="nav-brand">
+
+                <div class="nav-logo">
+                    SK
+                </div>
+
+                <span>
+                    Sahil Khan Tutor
+                </span>
+
+            </div>
+
+
+            <div class="nav-links">
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#learning">
+                    Learning
+                </a>
+
+                <a href="#roadmap">
+                    Roadmap
+                </a>
+
+                <button id="logoutButton">
+                    Logout
+                </button>
+
+            </div>
+
+        </nav>
+
+
+
+        <!-- HERO -->
+
+        <header class="home-hero">
+
+            <span class="hero-label">
+                SAHIL KHAN TUTOR
+            </span>
+
+
+            <h1>
+                Welcome to Sahil's Page
+            </h1>
+
+
+            <p>
+                Learn C Programming.
+                Think Like a Programmer.
+                Solve Problems with Confidence.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <button
+                    class="primary-button"
+                    onclick="scrollToLearning()"
+                >
+                    Start Learning →
+                </button>
+
+                <button
+                    class="secondary-button"
+                    onclick="scrollToAbout()"
+                >
+                    Meet Your Tutor
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ABOUT / TEACHER -->
+
+        <section
+            id="about"
+            class="teacher-section"
+        >
+
+            <div class="teacher-info">
+
+                <span class="section-label">
+                    YOUR PROGRAMMING MENTOR
+                </span>
+
+
+                <h2>
+                    Master C Programming
+                    with Sahil Khan.
+                </h2>
+
+
+                <p>
+                    Sahil Khan is a dedicated C Programming
+                    educator focused on helping students
+                    understand programming fundamentals,
+                    develop logical thinking and solve
+                    problems step by step.
+                </p>
+
+
+                <p>
+                    The goal is simple:
+                    don't just memorize code —
+                    understand how programmers think.
+                </p>
+
+
+                <div class="stats">
+
+                    <div>
+                        <strong>C</strong>
+                        <span>Programming</span>
+                    </div>
+
+                    <div>
+                        <strong>Logic</strong>
+                        <span>Building</span>
+                    </div>
+
+                    <div>
+                        <strong>Step</strong>
+                        <span>By Step</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TEACHER CARD -->
+
+            <div class="teacher-card">
+
+                <div class="teacher-avatar">
+                    SK
+                </div>
+
+
+                <span class="teacher-role">
+                    C PROGRAMMING EDUCATOR
+                </span>
+
+
+                <h3>
+                    Sahil Khan
+                </h3>
+
+
+                <p>
+                    Helping students move from
+                    programming basics to
+                    confident problem solving.
+                </p>
+
+
+                <div class="line"></div>
+
+
+                <div class="skills">
+
+                    <span>
+                        C Programming
+                    </span>
+
+                    <span>
+                        Problem Solving
+                    </span>
+
+                    <span>
+                        Programming Logic
+                    </span>
+
+                    <span>
+                        Fundamentals
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- LEARNING METHOD -->
+
+        <section
+            id="learning"
+            class="learning-section"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    THE LEARNING METHOD
+                </span>
+
+                <h2>
+                    Learn with a clear path.
+                </h2>
+
+                <p>
+                    Understand the concept,
+                    practice it and then build with it.
+                </p>
+
+            </div>
+
+
+            <div class="learning-grid">
+
+
+                <article class="learning-card">
+
+                    <span class="number">
+                        01
+                    </span>
+
+                    <h3>
+                        Understand
+                    </h3>
+
+                    <p>
+                        Learn the concept first.
+                        Understand why the code works
+                        before memorizing its syntax.
+                    </p>
+
+                </article>
+
+
+
+                <article class="learning-card">
+
+                    <span class="number">
+                        02
+                    </span>
+
+                    <h3>
+                        Practice
+                    </h3>
+
+                    <p>
+                        Solve programming problems
+                        and develop strong logical
+                        thinking through practice.
+                    </p>
+
+                </article>
+
+
+
+                <article class="learning-card">
+
+                    <span class="number">
+                        03
+                    </span>
+
+                    <h3>
+                        Build
+                    </h3>
+
+                    <p>
+                        Use your knowledge to create
+                        programs and become confident
+                        with programming.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ROADMAP -->
+
+        <section
+            id="roadmap"
+            class="roadmap-section"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    C PROGRAMMING JOURNEY
+                </span>
+
+                <h2>
+                    From beginner to problem solver.
+                </h2>
+
+                <p>
+                    Follow the learning path one step at a time.
+                </p>
+
+            </div>
+
+
+            <div class="roadmap">
+
+
+                <div class="roadmap-item active">
+
+                    <div class="roadmap-number">
+                        01
+                    </div>
+
+                    <div>
+                        <h3>
+                            Programming Fundamentals
+                        </h3>
+
+                        <p>
+                            Variables, data types,
+                            operators and input/output.
+                        </p>
+                    </div>
+
+                </div>
+
+
+
+                <div class="roadmap-item">
+
+                    <div class="roadmap-number">
+                        02
+                    </div>
+
+                    <div>
+                        <h3>
+                            Conditions & Loops
+                        </h3>
+
+                        <p>
+                            Build logic using decisions
+                            and repetition.
+                        </p>
+                    </div>
+
+                </div>
+
+
+
+                <div class="roadmap-item">
+
+                    <div class="roadmap-number">
+                        03
+                    </div>
+
+                    <div>
+                        <h3>
+                            Functions
+                        </h3>
+
+                        <p>
+                            Create reusable and
+                            organized programs.
+                        </p>
+                    </div>
+
+                </div>
+
+
+
+                <div class="roadmap-item">
+
+                    <div class="roadmap-number">
+                        04
+                    </div>
+
+                    <div>
+                        <h3>
+                            Arrays & Problem Solving
+                        </h3>
+
+                        <p>
+                            Work with collections of data
+                            and solve programming challenges.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FOOTER -->
+
+        <footer class="footer">
+
+            <div class="footer-logo">
+                SK
+            </div>
+
+            <h3>
+                Sahil Khan Tutor
+            </h3>
+
+            <p>
+                Learn. Practice. Achieve.
+            </p>
+
+            <span>
+                © 2026 Sahil Khan Tutor
+            </span>
+
+        </footer>
+
+    </section>
+
+
+
+    <!-- CONNECT JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
